@@ -32,7 +32,7 @@ public class Main {
          */
         System.out.println("Задача №2");
         int [] summ2 = {39000, 58000, 73450, 67890, 109550};
-        int summMax = 0, summMin = 0, maxMin = -1;
+        int summMax = 0, summMin = 0, maxMin = 0;
         for (int x = 0; x < summ2.length; x++){
             summMax = summ2[x];
             if (summMax > maxMin){
@@ -40,6 +40,7 @@ public class Main {
             }
         }
         System.out.println("Максимальная сумма трат за неделю составила " + maxMin + " рублей");
+        maxMin = summ2[0];
         for (int y = 0; y < summ2.length; y++){
             summMin = summ2[y];
             if (summMin < maxMin){
@@ -63,7 +64,7 @@ public class Main {
         for (int c = 0; c < summ3.length; c++){
             averageAmount += summ3[c];
         }
-        averageAmount /= 5;
+        averageAmount /= summ3.length;
         System.out.println("Средняя сумма трат за месяц составила " + averageAmount + " рублей");
 
         /*
